@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon --exec babel-node ./bin/www"
+    "dev": "nodemon --exec babel-node ./src",
+    "clean": "rm -rf dist && mkdir dist",
+    "build-babel": "babel ./src -d dist",
+    "build": "npm run clean && npm run build-babel",
+    "serve": "npm run build && node ./dist/index.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

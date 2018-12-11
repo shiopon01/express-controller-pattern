@@ -63,3 +63,4 @@ typings/
 # other
 .history
 .vscode
+dist
